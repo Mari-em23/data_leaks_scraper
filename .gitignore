@@ -1,0 +1,8 @@
+Telegram/.env
+.venv
+.vscode
+**/__pycache__/
+**/.env/
+Telegram/*.session
+Telegram/*.session-journal
+leaks.db-journal
