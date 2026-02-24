@@ -60,17 +60,6 @@ def generate_leak_description(post):
 
     return get_first_line(raw)
 
-""" To do if possible: 
-* Type de données (emails, mots de passe, cartes, etc.)
-* Secteur impacté
-* Catégorisation :
-    o Données à Caractère Personnel (PII) : Numéros de sécurité sociale, passeports,
-    coordonnées bancaires
-    o Secrets d'affaires : codes sources
-    o Identifiants d'accès : Mots de passe, jetons d'authentification ou clés de
-    chiffrement.
-+
-Filtering messages to eliminate false positives    
-"""
+
 
 

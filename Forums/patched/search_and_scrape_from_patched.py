@@ -1,9 +1,8 @@
-# Run from /Code : python -m Forums.patched.search_and_scrape_from_patched
+# Run from Code/ : python -m Forums.patched.search_and_scrape_from_patched
 
 from datetime import datetime
 from playwright.sync_api import sync_playwright
 import os
-import sys
 import json
 
 from sqlite_connection.sqlite_connection import add_forums_leaks
@@ -154,7 +153,7 @@ def main():
                     break
 
             # Save to JSON file
-            output_file = os.path.join('Forums/darkforums/search_results.json')
+            output_file = os.path.join('Forums/patched/search_results.json')
             # Load existing data if file exists
             if os.path.exists(output_file):
                 with open(output_file, 'r', encoding='utf-8') as f:
@@ -172,7 +171,7 @@ def main():
 
 
             # Also save to Python list representation
-            list_file = os.path.join('Forums/darkforums/search_results.py')
+            list_file = os.path.join('Forums/patched/search_results.py')
             if os.path.exists(list_file):
                 # Import existing list safely
                 import importlib.util

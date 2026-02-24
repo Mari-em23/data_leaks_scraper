@@ -177,6 +177,3 @@ async def main():
 
 # Runs the async main
 asyncio.run(main())
-
-"""What can be improved :
-        - Language detection before translation to reduce unnecessary processing"""

@@ -12,14 +12,14 @@ from sqlite_connection.sqlite_connection import add_forums_leaks
 What this script does:
 1. Navigates to the search page of the forum.
 2. Fills in the search keyword and submits the search form.
-3. Waits for the search results to load and extracts relevant information from each result, including
+3. Waits for the search results to load and from each page, extracts relevant information from each result, including
     - Thread title
     - Author
     - Forum name
     - Number of replies
     - Number of views
     - Link to the thread
-4. For each thread, it also navigates to the thread page to extract the post date and saves a screenshot of the thread.
+4. For each thread, it also navigates to the thread page to extract the post date and saves a screenshot of the thread in threads_screenshots/ folder.
 5. Saves all extracted information into a JSON file and also creates a Python list representation for easy access in other scripts.
 6. Logs the process and handles exceptions gracefully, including saving error screenshots if something goes wrong.
 
@@ -118,7 +118,7 @@ def main():
                     post_date = str(datetime.strptime(date_str, "%d-%m-%y, %I:%M %p"))
 
                     # Save screenshot of the thread page
-                    thread_path = os.path.join("Forums/darkforums/threads_screenshots", f"thread_number_{index}.png")
+                    thread_path = os.path.join("Forums/threads_screenshots", f"thread_number_{index}.png")
                     
                     # Sreenshot only the post element. 
                     captured_el = None
